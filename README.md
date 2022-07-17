@@ -1,6 +1,6 @@
-# What is Meal planning?
+# What is Easy Meal?
 
-Meal Planner is a small application that randomly generates your meal list for the week.
+Easy Meal is a small application that randomly generates your meal list for the week.
 
 # How to use it
 
