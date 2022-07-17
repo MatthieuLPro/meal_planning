@@ -1,0 +1,54 @@
+# Structure
+# week_day:
+#   name: String => 'My week day meal name'
+#   needed: Boolean => 'If I need to make the dish'
+
+monday: 
+  lunch:
+    name: 'Lundi - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Lundi - Diner'
+    needed: true
+tuesday:
+  lunch:
+    name: 'Mardi - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Mardi - Diner'
+    needed: true
+wednesday:
+  lunch:
+    name: 'Mercredi - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Mercredi - Diner'
+    needed: true
+thursday:
+  lunch:
+    name: 'Jeudi - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Jeudi - Diner'
+    needed: true
+friday:
+  lunch:
+    name: 'Vendredi - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Vendredi - Diner'
+    needed: true
+saturday:
+  lunch:
+    name: 'Samedi - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Samedi - Diner'
+    needed: true
+sunday:
+  lunch:
+    name: 'Dimanche - Déjeuner'
+    needed: true
+  dinner:
+    name: 'Dimanche - Diner'
+    needed: true

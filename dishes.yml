@@ -1,0 +1,114 @@
+# Structure
+# dish_key:
+#   name: String => 'My dish name'
+#   remains: Boolean => 'If the quantity of the dish is sufficient for more than one meal'
+#   priority: String (high or low) => 'If I absolutly want to eat this dish this week'
+
+croque_monsieur:
+  name: 'Croque monsieur'
+  remains: false
+  priority: high
+kare_rice:
+  name: 'Curry japonais'
+  remains: true
+  priority: high
+omu_rice:
+  name: 'Omurice'
+  remains: false
+  priority: high
+lentille_steak:
+  name: 'Lentille steak haché'
+  remains: true
+  priority: high
+lentille_vegan:
+  name: 'Lentille vegan'
+  remains: true
+  priority: high
+pates_bolognaise:
+  name: 'Pates bolognaise'
+  remains: true
+  priority: high
+pates_carbonara_fr:
+  name: 'Pates carbonara francaise'
+  remains: true
+  priority: high
+pates_carbonara_ita:
+  name: 'Pates carbonara italienne'
+  remains: true
+  priority: high
+pates_champignon:
+  name: 'Pates sauce champignon'
+  remains: true
+  priority: high
+pizzas:
+  name: 'Pizzas'
+  remains: false
+  priority: high
+pomme_terre_four_steak: 
+  name: 'Pomme de terre au four et steak haché'
+  remains: true
+  priority: high
+pomme_terre_four_vegan: 
+  name: 'Pomme de terre au four et vegan'
+  remains: true
+  priority: high
+puree_steak: 
+  name: 'Purée steak haché'
+  remains: true
+  priority: high
+riz_ail_steak: 
+  name: "Riz a l'ail et steak haché"
+  remains: true
+  priority: high
+riz_ail_vegan: 
+  name: "Riz a l'ail et vegan"
+  remains: true
+  priority: high
+riz_haricot_poisson: 
+  name: 'Riz haricot poisson pané'
+  remains: true
+  priority: high
+riz_haricot_saumon: 
+  name: 'Riz haricot poisson saumon'
+  remains: false
+  priority: high
+riz_poisson: 
+  name: 'Riz poisson pané'
+  remains: true
+  priority: high
+riz_poulet: 
+  name: 'Riz poulet'
+  remains: false
+  priority: high
+riz_saumon: 
+  name: 'Riz saumon'
+  remains: false
+  priority: high
+salade_de_riz: 
+  name: 'Salade de riz'
+  remains: true
+  priority: high
+salade_mixte: 
+  name: 'Salade mixte'
+  remains: true
+  priority: high
+salade_mixte_feta: 
+  name: 'Salade mixte feta'
+  remains: true
+  priority: high
+salade_mixte_mozarella: 
+  name: 'Salade mixte mozarella'
+  remains: true
+  priority: high
+taboulet_boite: 
+  name: 'Taboulet boite'
+  remains: true
+  priority: high
+taboulet_conserve: 
+  name: 'Taboulet conserve'
+  remains: true
+  priority: high
+taboulet_maison: 
+  name: 'Taboulet maison'
+  remains: true
+  priority: high
