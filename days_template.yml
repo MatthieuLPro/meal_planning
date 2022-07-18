@@ -5,50 +5,50 @@
 
 monday: 
   lunch:
-    name: 'Lundi - Déjeuner'
+    name: 'Monday - Lunch'
     needed: true
   dinner:
-    name: 'Lundi - Diner'
+    name: 'Monday - Dinner'
     needed: true
 tuesday:
   lunch:
-    name: 'Mardi - Déjeuner'
+    name: 'Tuesday - Lunch'
     needed: true
   dinner:
-    name: 'Mardi - Diner'
+    name: 'Tuesday - Dinner'
     needed: true
 wednesday:
   lunch:
-    name: 'Mercredi - Déjeuner'
+    name: 'Wednesday - Lunch'
     needed: true
   dinner:
-    name: 'Mercredi - Diner'
+    name: 'Wednesday - Dinner'
     needed: true
 thursday:
   lunch:
-    name: 'Jeudi - Déjeuner'
+    name: 'Thursday - Lunch'
     needed: true
   dinner:
-    name: 'Jeudi - Diner'
+    name: 'Thursday - Dinner'
     needed: true
 friday:
   lunch:
-    name: 'Vendredi - Déjeuner'
+    name: 'Friday - Lunch'
     needed: true
   dinner:
-    name: 'Vendredi - Diner'
+    name: 'Friday - Dinner'
     needed: true
 saturday:
   lunch:
-    name: 'Samedi - Déjeuner'
+    name: 'Saturday - Lunch'
     needed: true
   dinner:
-    name: 'Samedi - Diner'
+    name: 'Saturday - Dinner'
     needed: true
 sunday:
   lunch:
-    name: 'Dimanche - Déjeuner'
+    name: 'Sunday - Lunch'
     needed: true
   dinner:
-    name: 'Dimanche - Diner'
+    name: 'Sunday - Dinner'
     needed: true
