@@ -1,0 +1,14 @@
+# Structure
+# dish_key:
+#   name: String => 'My dish name'
+#   remains: Boolean => 'If the quantity of the dish is sufficient for more than one meal'
+#   priority: String (high or low) => 'If I absolutly want to eat this dish this week'
+#   dessert_needed: Boolean => 'If the main course need a dessert'
+#   starter_needed: Boolean => 'If the main course need a dessert a starter'
+
+pasta:
+  dessert_needed: true
+  starter_needed: true
+  name: 'Pasta'
+  remains: true
+  priority: high

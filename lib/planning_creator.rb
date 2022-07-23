@@ -7,15 +7,15 @@ require_relative 'constantes'
 
 class PlanningCreator
   def initialize
-    @possible_desserts = create_possible_dishes(DISHES_TYPES[0])
-    @possible_first_courses = create_possible_dishes(DISHES_TYPES[1])
-    @possible_main_courses = create_possible_dishes(DISHES_TYPES[2])
+    @possible_desserts = create_possible_dishes(DESSERTS_SOURCE)
+    @possible_starters = create_possible_dishes(STARTERS_SOURCE)
+    @possible_main_courses = create_possible_dishes(MAIN_COURSES_SOURCE)
   end
 
   def dishes_per_day
     meals_per_day = create_days_meals
     current_dish = nil
-    current_first_course = nil
+    current_starter = nil
 
     meals_per_day.map do |meal|
       main_course = if dish_remains?(current_dish)
@@ -28,14 +28,14 @@ class PlanningCreator
                       current_dish[DISH_KEYS.first]
                     end
 
-      first_course = if dish_remains?(current_first_course) || (@possible_first_courses[PRIORITIES.first].empty? && @possible_first_courses[PRIORITIES.second].empty?)
-                       current_first_course = nil
+      starter = if dish_remains?(current_starter) || (@possible_starters[PRIORITIES.first].empty? && @possible_starters[PRIORITIES.second].empty?)
+                       current_starter = nil
                        REMAINS
-                     elsif first_course_available?(current_dish)
-                       first_course_list_index = find_priority(@possible_first_courses)
-                       current_first_course = @possible_first_courses[first_course_list_index].sample
-                       @possible_first_courses[first_course_list_index].delete(current_first_course)
-                       current_first_course[DISH_KEYS.first]
+                     elsif starter_available?(current_dish)
+                       starter_list_index = find_priority(@possible_starters)
+                       current_starter = @possible_starters[starter_list_index].sample
+                       @possible_starters[starter_list_index].delete(current_starter)
+                       current_starter[DISH_KEYS.first]
                      end
 
       dessert = if dessert_available?(current_dish)
@@ -47,7 +47,7 @@ class PlanningCreator
 
       {
         meal => {
-          DISHES_TYPES_SINGULAR.second => first_course,
+          DISHES_TYPES_SINGULAR.second => starter,
           DISHES_TYPES_SINGULAR[2] => main_course,
           DISHES_TYPES_SINGULAR.first => dessert
         }
@@ -55,8 +55,8 @@ class PlanningCreator
     end
   end
 
-  def find_priority(possiblde_dishes)
-    if prioritized_dishes_empty?(possiblde_dishes)
+  def find_priority(possible_dishes)
+    if prioritized_dishes_empty?(possible_dishes)
       PRIORITIES.second
     else
       PRIORITIES.first
@@ -67,8 +67,8 @@ class PlanningCreator
     dishes[PRIORITIES.first].empty?
   end
 
-  def create_possible_dishes(type)
-    dishes = get_sources(DISHES_SOURCE)[type].values
+  def create_possible_dishes(dishes_source)
+    dishes = get_sources(dishes_source).values
     {
       PRIORITIES.first => dishes.select { |dish| dish[DISH_KEYS[2]] == PRIORITIES.first },
       PRIORITIES.second => dishes.select { |dish| dish[DISH_KEYS[2]] == PRIORITIES.second }
@@ -90,7 +90,7 @@ class PlanningCreator
     dish && dish[DISH_KEYS[3]]
   end
 
-  def first_course_available?(dish)
+  def starter_available?(dish)
     dish.nil? || dish[DISH_NEEDED.second]
   end
 

@@ -1,0 +1,10 @@
+# Structure
+# dish_key:
+#   name: String => 'My dish name'
+#   remains: Boolean => 'If the quantity of the dish is sufficient for more than one meal'
+#   priority: String (high or low) => 'If I absolutly want to eat this dish this week'
+
+caesar_salad:
+  name: 'Caesar salad'
+  priority: high
+  remains: true
