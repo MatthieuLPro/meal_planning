@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 
 require 'pry'
+require_relative '../misc'
 require_relative '../constantes'
-
 
 class Dish
   def self.create_possible_dishes(dishes_source)
@@ -31,8 +32,6 @@ class Dish
   def self.dessert_available?(dish)
     dish && dish[DISH_NEEDED.first]
   end
-
-  private
 
   def self.prioritized_dishes_empty?(dishes)
     dishes[PRIORITIES.first].empty?

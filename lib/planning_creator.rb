@@ -31,14 +31,14 @@ class PlanningCreator
                     end
 
       starter = if Dish.dish_remains?(current_starter) || (@possible_starters[PRIORITIES.first].empty? && @possible_starters[PRIORITIES.second].empty?)
-                       current_starter = nil
-                       REMAINS
-                     elsif Dish.starter_available?(current_dish)
-                       starter_list_index = Dish.find_priority(@possible_starters)
-                       current_starter = @possible_starters[starter_list_index].sample
-                       @possible_starters[starter_list_index].delete(current_starter)
-                       current_starter[DISH_KEYS.first]
-                     end
+                  current_starter = nil
+                  REMAINS
+                elsif Dish.starter_available?(current_dish)
+                  starter_list_index = Dish.find_priority(@possible_starters)
+                  current_starter = @possible_starters[starter_list_index].sample
+                  @possible_starters[starter_list_index].delete(current_starter)
+                  current_starter[DISH_KEYS.first]
+                end
 
       dessert = if Dish.dessert_available?(current_dish)
                   dessert_list_index = Dish.find_priority(@possible_desserts)
