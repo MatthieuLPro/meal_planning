@@ -5,6 +5,7 @@ DISH_KEYS = %w[name needed priority remains].freeze
 DISH_NEEDED = %w[dessert_needed starter_needed].freeze
 DISHES_TYPES_SINGULAR = %w[dessert starters main_course].freeze
 PRIORITIES = %w[high low].freeze
+EMPTY_LIST = 'Liste de plat'
 REMAINS = 'Restes'
 DAYS_SOURCE = 'resources/days.yml'
 STARTERS_SOURCE = 'resources/starters.yml'
